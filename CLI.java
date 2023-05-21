@@ -23,5 +23,6 @@ public class CLI {
 
         String [] args = new String[]{command, filePath, key};
 
+        new Runner().runProgramm(args);
     }
 }
