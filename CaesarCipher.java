@@ -77,13 +77,10 @@ public class CaesarCipher {
 
     public char encryptChar(char c, int key) {
         if (Character.isLetterOrDigit(c) || c == '.' || c == ',' || c == '«' || c == '»' || c == '"' || c == '\'' || c == ':' || c == '!' || c == '?' || c == ' ') {
-//            boolean isUpperCase = Character.isUpperCase(c);
-//            c = Character.toLowerCase(c);
             int index = alphabet.indexOf(c);
             if (index != -1) {
                 int encryptedIndex = (index + key) % alphabet.length();
                 if (encryptedIndex < 0) encryptedIndex = encryptedIndex + alphabet.length();
-//                c = isUpperCase ? Character.toUpperCase(alphabet.charAt(encryptedIndex)) : alphabet.charAt(encryptedIndex);
                 c = alphabet.charAt(encryptedIndex);
             }
         }
